@@ -2,32 +2,40 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Captura de Imagem da Câmera</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Imagem da Câmera</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <h1>Captura de Imagem da Câmera</h1>
+    <h1>Captura de Imagem da Câmera</h1>
 
-  <div class="port">
-    <div class="live">
-      <!-- Vídeo para mostrar o stream da câmera -->
-      <video id="video" autoplay></video>
+    <div class="port">
+        <div class="live">
+            <!-- Vídeo para mostrar o stream da câmera -->
+            <video id="video" autoplay></video>
 
-      <!-- Botão para capturar a imagem -->
-      <button id="captureButton">Capturar Imagem</button>
+            <!-- Botão para capturar a imagem -->
+            <button id="captureButton">Capturar Imagem</button>
+        </div>
+
+        <div class="exibicao">
+            <!-- Canvas onde a imagem será desenhada -->
+            <canvas id="canvas"></canvas>
+            <!-- Imagem gerada a partir da captura -->
+            <img id="capturedImage" alt="Imagem Capturada" style="display:none; margin-top: 20px;">
+        </div>
+
+        <div class="download">
+            <!-- Botão para baixar a imagem -->
+            <a id="downloadButton" href="#" download="imagem.png">
+                <button>Baixar Imagem</button>
+            </a>
+        </div>
     </div>
 
-    <div class="exibicao">
-      <!-- Canvas onde a imagem será desenhada -->
-      <canvas id="canvas"></canvas>
-      <!-- Imagem gerada a partir da captura -->
-      <img id="capturedImage" alt="Imagem Capturada" style="display:none; margin-top: 20px;">
-    </div>
-  </div>
-
-  <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
